@@ -10,9 +10,33 @@ package GameBlackJack;
 //9. Определить победителя
 
 
+import GameBlackJack.models.CroupierGJ;
+import GameBlackJack.models.GameBJImpl;
+import GameBlackJack.models.PlayerImpl;
 
 public class Main {
     public static void main(String[] args) {
+
+        GameBJImpl gameBJ = new GameBJImpl();
+
+         PlayerImpl player1 = new PlayerImpl();
+         PlayerImpl player2 = new PlayerImpl();
+
+         CroupierGJ croupierGJ = new CroupierGJ();
+
+         gameBJ.addPlayerInGame(player1);
+         gameBJ.addPlayerInGame(player2);
+         gameBJ.addPlayerInGame(croupierGJ);
+
+         gameBJ.giveTwoCardsOnHands();
+
+         gameBJ.giveOneCardIfNeedToPlayer();
+
+         gameBJ.printWinner();
+
+
+
+
 
     }
 }

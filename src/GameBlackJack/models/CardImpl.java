@@ -20,6 +20,7 @@ public class CardImpl implements Card {
 
     @Override
     public int getValue() {
-        return 0;
+
+        return value;
     }
 }

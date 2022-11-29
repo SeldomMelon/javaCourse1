@@ -5,4 +5,5 @@ public interface Player {
     int countValuesOfAllCarsOnHands();
     boolean needCard();
     void showCardsOnHand();
+    boolean isCroupier();
 }
