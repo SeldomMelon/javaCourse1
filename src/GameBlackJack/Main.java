@@ -19,10 +19,10 @@ public class Main {
 
         GameBJImpl gameBJ = new GameBJImpl();
 
-         PlayerImpl player1 = new PlayerImpl();
-         PlayerImpl player2 = new PlayerImpl();
+         PlayerImpl player1 = new PlayerImpl("Вася");
+         PlayerImpl player2 = new PlayerImpl("Петя");
 
-         CroupierGJ croupierGJ = new CroupierGJ();
+         CroupierGJ croupierGJ = new CroupierGJ("Крупье");
 
          gameBJ.addPlayerInGame(player1);
          gameBJ.addPlayerInGame(player2);

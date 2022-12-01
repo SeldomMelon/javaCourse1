@@ -11,7 +11,20 @@ public class PlayerImpl implements Player {
     Card[] cardsOnHand = new Card[100];
 
     boolean inGame;
-    boolean isCroupier = true;
+
+    public PlayerImpl(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    boolean isCroupier;
 
 
     @Override

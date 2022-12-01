@@ -65,7 +65,7 @@ public class GameBJImpl implements GameBJ {
 
         for (PlayerImpl player : playersInGame) {
             if (player != null && player.isInGame() && !player.isCroupier) {
-                System.out.println("Победил игрок: " + player);
+                System.out.println("Победил игрок: " + player.getName());
                 player.showCardsOnHand();
             }
         }
