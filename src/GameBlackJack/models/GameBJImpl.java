@@ -46,9 +46,9 @@ public class GameBJImpl implements GameBJ {
             }
         }
         if (countPlayersInGame() == 1) {
-            System.out.println("Победил игрок: " );
             for (PlayerImpl player : playersInGame) {
                 if (player != null && player.isInGame()) {
+                    System.out.println("Победил игрок: " + player.getName() );
                     player.showCardsOnHand();
                 }
             }
@@ -65,7 +65,7 @@ public class GameBJImpl implements GameBJ {
 
         for (PlayerImpl player : playersInGame) {
             if (player != null && player.isInGame() && !player.isCroupier) {
-                System.out.println("Победил игрок: " + player.getName());
+                System.out.println("Победил игрок: " + player.getName() );
                 player.showCardsOnHand();
             }
         }

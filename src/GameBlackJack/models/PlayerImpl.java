@@ -8,24 +8,18 @@ import java.util.Scanner;
 public class PlayerImpl implements Player {
 
     String name;
-    Card[] cardsOnHand = new Card[100];
+    Card[] cardsOnHand;
 
     boolean inGame;
-
-    public PlayerImpl(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     boolean isCroupier;
 
+
+    public PlayerImpl(String name, boolean inGame) {
+        this.name = name;
+        this.cardsOnHand = new Card[100];
+        this.inGame = inGame;
+        this.isCroupier = false;
+    }
 
     @Override
     public void takeCard(Card card) {
@@ -88,5 +82,20 @@ public class PlayerImpl implements Player {
     public void setCroupier(boolean croupier) {
 
         isCroupier = croupier;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Card[] getCardsOnHand() {
+        return cardsOnHand;
+    }
+
+    public void setCardsOnHand(Card[] cardsOnHand) {
+        this.cardsOnHand = cardsOnHand;
     }
 }
