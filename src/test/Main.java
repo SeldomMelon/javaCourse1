@@ -25,7 +25,6 @@ public class Main {
 
         categories = categories.stream()
                 .filter(a -> a.getPrice() > 100)
-                .sorted(Comparator.comparing(Category::getName))
                 .collect(Collectors.toList());
         System.out.println("Книги стоимостью больше 100 рублей:");
         for (Category book : categories) {
